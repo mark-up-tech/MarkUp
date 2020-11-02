@@ -1,0 +1,66 @@
+    .body {
+        font-family: "Hind Siliguri", sans-serif;
+        color: #505050;
+    }
+    
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Banner.jpg");
+        /* Set a specific height */
+        height: 300%;
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    /* Place text in the middle of the image */
+    
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+    
+    .navbar {
+        background-color: transparent;
+    }
+    
+    .navbar .nav-link {
+        font-size: 14px;
+        text-transform: uppercase;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-top: 30px;
+        color: #505050;
+    }
+    
+    .navbar-brand {
+        color: #505050;
+        padding-top: 10px;
+    }
+    
+    .navbar-toggler {
+        outline: none !important;
+    }
+    
+    .carousel-caption h3 {
+        color: #000000;
+    }
+    
+    .carousel-caption h5 {
+        color: #282828;
+    }
+    
+    .card {
+        font-family: "Hind Siliguri", sans-serif;
+        padding-bottom: 10px;
+        margin: 8px;
+    }
+    
+    .footer-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
