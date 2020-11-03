@@ -1,62 +1,187 @@
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
-.body {
-  font-family: "Hind Siliguri", sans-serif;
-  color: #505050;
+.navbar-nav a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("Banner.jpg");
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light.navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.show > .nav-link {
+  color: #5b9bd5;
+}
 
-  /* Set a specific height */
-  height: 300%;
+.navbar-light.navbar-nav .nav-link {
+  color: #5b9bd5;
+}
 
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #5b9bd5 !important;
+}
+
+.searchbar {
   position: relative;
+  vertical-align: middle;
+  padding-left: 450px;
 }
 
-/* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
+.searchbar input[type="text"] {
+  border: 0;
+  padding: 0;
+  width: 0px;
+  height: 35px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.searchbar .icon {
   position: absolute;
-  top: 30%;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 100%;
+  background: none;
+  border-radius: 3px;
+  color: #000;
+  transition: all 0.5s 0.3s ease;
+}
+
+.searchbar .icon i {
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  cursor: pointer;
 }
 
-.navbar {
-  background-color: transparent;
+.searchbar .icon.active {
+  background: #5b9bd5;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
-.navbar .nav-link {
-  font-size: 14px;
-  text-transform: uppercase;
-  padding-left: 16px !important;
-  padding-right: 16px !important;
-  padding-top: 30px;
-  color: #505050;
+.searchbar input[type="text"].active {
+  width: 250px;
+  padding: 0 10px;
+  transition: all 0.5s 0.2s ease;
 }
 
-.navbar-brand {
-  color: #505050;
-  padding-top: 10px;
+.carousel-item {
+  height: 75vh;
+  min-height: 75vh;
+  background: no-repeat center center scroll;
 }
 
-.navbar-toggler {
-  outline: none !important;
+.carousel-indicators .active {
+  background-color: #5b9bd5;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235B9BD5' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%235B9BD5' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-caption {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.carousel-caption h1 {
+  color: #e6f1ff;
+  font-weight: bold;
 }
 
 .carousel-caption h3 {
   color: #000000;
+  font-weight: bold;
 }
 
 .carousel-caption h5 {
   color: #282828;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: transparent;
+  border-color: #5b9bd5;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #3482cb;
+  border-color: #3482cb;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(91, 194, 194, 0.5);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #212529;
+  background-color: #7cc;
+  border-color: #5bc2c2;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #212529;
+  background-color: #9cdada;
+  border-color: #2e7c7c;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(91, 194, 194, 0.5);
+}
+
+.btn-outline-primary {
+  color: #7cc;
+  background-color: transparent;
+  background-image: none;
+  border-color: #7cc;
+}
+
+.btn-outline-primary:hover {
+  color: #222;
+  background-color: #8ad3d3;
+  border-color: #7cc;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(119, 204, 204, 0.5);
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+  color: #7cc;
+  background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #212529;
+  background-color: #8ad3d3;
+  border-color: #7cc;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(119, 204, 204, 0.5);
 }
 
 .card {
