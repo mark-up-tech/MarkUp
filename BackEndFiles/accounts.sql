@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2020 at 12:53 PM
+-- Generation Time: Nov 04, 2020 at 01:19 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `account management system`
+-- Database: `testlogin2`
 --
 
 -- --------------------------------------------------------
@@ -29,23 +29,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `ID` int(11) NOT NULL,
-  `First_Name` varchar(30) NOT NULL,
-  `Last_Name` varchar(30) NOT NULL,
+  `First_Name` varchar(128) NOT NULL,
+  `Last_Name` varchar(128) NOT NULL,
   `Contact_Num` bigint(11) NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Password` varchar(30) NOT NULL,
+  `Email` varchar(128) NOT NULL,
+  `UserPwd` varchar(128) NOT NULL,
   `Date_Created` timestamp NOT NULL DEFAULT current_timestamp(),
   `Status` int(1) NOT NULL DEFAULT 1
-  `Role` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`ID`, `First_Name`, `Last_Name`, `Contact_Num`, `Email`, `Password`, `Date_Created`, `Status`, `Role`) VALUES
-(1, 'ad', 'min', 9111111111, 'admin@yahoo.com', 'admin', '2020-11-01 11:51:18', 1, 0),
-(2, 'u', 'ser', 922222222, 'user@yahoo.com', 'user', '2020-11-01 11:51:46', 1, 1);
+INSERT INTO `accounts` (`ID`, `First_Name`, `Last_Name`, `Contact_Num`, `Email`, `UserPwd`, `Date_Created`, `Status`) VALUES
+(22, 'jonathan', 'Lozano', 12333, 'kyle@gmail.com', '$2y$10$hGqyKiBqu/v.lCGlZl7pUOvyyESPQYCd4sp/xw8OEGJmuM3rsZcuS', '2020-11-02 15:03:25', 1),
+(23, 'wap', 'los', 9094565, 'kyle2@gmail.com', '$2y$10$txSfqUy2ER.3lpAN0H/1cOOIn/ryxd6L6HJ29.9L4jhcnb4Agywma', '2020-11-02 15:12:46', 1);
 
 --
 -- Indexes for dumped tables
@@ -68,7 +67,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
