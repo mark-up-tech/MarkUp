@@ -36,15 +36,16 @@ CREATE TABLE `accounts` (
   `Password` varchar(30) NOT NULL,
   `Date_Created` timestamp NOT NULL DEFAULT current_timestamp(),
   `Status` int(1) NOT NULL DEFAULT 1
+  `Role` int(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`ID`, `First_Name`, `Last_Name`, `Contact_Num`, `Email`, `Password`, `Date_Created`, `Status`) VALUES
-(1, 'ad', 'min', 9111111111, 'admin@yahoo.com', 'admin', '2020-11-01 11:51:18', 1),
-(2, 'u', 'ser', 922222222, 'user@yahoo.com', 'user', '2020-11-01 11:51:46', 1);
+INSERT INTO `accounts` (`ID`, `First_Name`, `Last_Name`, `Contact_Num`, `Email`, `Password`, `Date_Created`, `Status`, `Role`) VALUES
+(1, 'ad', 'min', 9111111111, 'admin@yahoo.com', 'admin', '2020-11-01 11:51:18', 1, 0),
+(2, 'u', 'ser', 922222222, 'user@yahoo.com', 'user', '2020-11-01 11:51:46', 1, 1);
 
 --
 -- Indexes for dumped tables
