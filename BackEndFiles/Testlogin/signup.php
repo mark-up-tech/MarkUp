@@ -12,13 +12,13 @@
 
     <h2>Sign Up</h2>
     <form action="includes/signup.inc.php" method="post">
-        <input type="text" name="fname" placeholder="Firstname...">
-        <input type="text" name="lname" placeholder="Lastname...">
-        <input type="text" maxlength="11" name="contactno" placeholder="Concact No...">
-        <input type="text" name="email" placeholder="Email...">
-        <input type="password" name="pwd" placeholder="Password...">
-        <input type="password" name="pwdrepeat" placeholder="Repeat password...">
-        <button type="submit" name="submit">Sign Up</button>
+        <input type="text" name="fname" placeholder="Firstname..."><br> </br>
+        <input type="text" name="lname" placeholder="Lastname..."><br> </br>
+        <input type="text" minlength="11" maxlength="11" name="contactno" placeholder="Concact No..."><br> </br>
+        <input type="text" name="email" placeholder="Email..."><br> </br>
+        <input type="password" name="pwd" placeholder="Password..."><br> </br>
+        <input type="password" name="pwdrepeat" placeholder="Repeat password..."><br> </br>
+        <button type="submit" name="submit">Sign Up</button><br> </br>
     </form>
     <?php
     if(isset($_GET["error"])){
