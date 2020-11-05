@@ -1,10 +1,14 @@
 <?php
-    include_once 'header.php'
+    include_once 'header.php';
+    
 ?>
+
 
 
 <!DOCTYPE html>
 <html lang="en">
+    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +19,12 @@
      <h1>Welcome!!</h1>
      
      <?php
-     if(isset($_SESSION["ID"])){
-        echo "<p>Hello There " . $_SESSION["ID"]."</p>";                 
+     if(isset($_SESSION["fname"])){
+        echo "<h2> Hello There " . $_SESSION["fname" ]."!</h2>";                 
              }
-                        
-                    ?>
-     <?php
-
     ?>
+    
+     
 </body>
 </html>
 

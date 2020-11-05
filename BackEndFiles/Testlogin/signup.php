@@ -2,11 +2,19 @@
  include_once 'header.php'
 ?>
 
+<script type="text/javascript">
+        window.history.forward();
+
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+
     <h2>Sign Up</h2>
     <form action="includes/signup.inc.php" method="post">
         <input type="text" name="fname" placeholder="Firstname...">
         <input type="text" name="lname" placeholder="Lastname...">
-        <input type="text" name="contactno" placeholder="Concact No...">
+        <input type="text" maxlength="11" name="contactno" placeholder="Concact No...">
         <input type="text" name="email" placeholder="Email...">
         <input type="password" name="pwd" placeholder="Password...">
         <input type="password" name="pwdrepeat" placeholder="Repeat password...">
@@ -23,8 +31,8 @@
         elseif ($_GET["error"] == "invalidlname"){
             echo "<p> Fill in Lastname field!<p>";
         }
-        elseif ($_GET["error"] == "invalidcontact"){
-            echo "<p> Choose a proper contact no!<p>";
+        elseif ($_GET["error"] == "invalidcontactno"){
+            echo "<p> Contact No. Must be 11 digits!<p>";
         }
         elseif ($_GET["error"] == "invalidemail"){
             echo "<p> Choose a proper email!<p>";
@@ -35,13 +43,14 @@
         elseif ($_GET["error"] == "stmtfailed"){
             echo "<p> Something went wrong, try Again!<p>";
         }
-        elseif ($_GET["error"] == "usernametaken"){
-            echo "<p> Username already taken!<p>";
+        elseif ($_GET["error"] == "emailtaken"){
+            echo "<p> Email already taken!<p>";
         }
         elseif ($_GET["error"] == "none"){
-            echo "<p> You have signed Up!<p>";
+            echo "<p> You have signed Up!<p>";   
         }
     }
+    
 ?>
 
 <?php

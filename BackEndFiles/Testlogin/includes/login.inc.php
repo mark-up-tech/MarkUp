@@ -13,6 +13,7 @@ if(isset($_POST["submit"])) {
         exit();
     }
 
+
     loginUser($conn, $contact, $pwd);
     
 }

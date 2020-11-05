@@ -40,7 +40,7 @@ function  invalidlname($lname){
 function  invalidcontact($contact){
     $result;
 
-    if (!preg_match("/^[0-9]*$/", $contact )) {
+    if (!preg_match("/^[0-9]{11}+$/", $contact )) {
         $result = true;
     }
     else{ 
@@ -112,7 +112,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
     mysqli_stmt_bind_param($stmt, "ssiss", $fname, $lname, $contact, $email, $hashedPwd);
     mysqli_stmt_execute($stmt); 
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+        header("location: ../login.php");
         exit();
  }
 
@@ -132,7 +132,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
 function loginUser($conn, $contact, $pwd) {
     $emailExists = emailExixst($conn, $contact, $contact );
 
-    if($$emailExists === false) {
+    if($emailExists === false) {
         header("location: ../login.php?error=wrongLogin");
         exit();
     }
@@ -141,13 +141,13 @@ function loginUser($conn, $contact, $pwd) {
     $checkPwd = password_verify($pwd, $pwdhashed);
 
     if($checkPwd === false) {
-        header("location: ../login.php?error=wrongpassword1");
+        header("location: ../login.php?error=wrongpassword");
         exit();
     }
     elseif ($checkPwd === true){
         session_start();
-        $_SESSION["ID"] = $emailExists["UsersID"];
         $_SESSION["email"] = $emailExists["Email"];
+        $_SESSION["fname"] = $emailExists["First_Name"];
         header("location: ../index.php");
         exit();
 
