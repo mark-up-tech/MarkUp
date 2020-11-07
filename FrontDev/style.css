@@ -28,7 +28,9 @@
 }
 
 .searchbar {
-  position: relative;
+    position: absolute;
+    margin-top:10px;
+    top:0%;
   left: 50%;
   transform: translateX(-50%);
 }
