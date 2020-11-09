@@ -12,6 +12,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="html/script.js" defer></script>
     <link rel="stylesheet" href="html/style.css">
     <link rel="icon" type="image/png" href="mulogo.png">
     <title>Mark Up</title>
