@@ -13,7 +13,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="html/style.css">
-    <link rel="icon" type="image/png" href="mulogo.png">
+    <link rel="icon" type="image/png" href="images/mulogo.png">
     <title>Mark Up</title>
 </head>
 
