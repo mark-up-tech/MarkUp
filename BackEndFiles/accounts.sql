@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2020 at 09:18 AM
+-- Generation Time: Nov 09, 2020 at 09:25 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -44,7 +44,8 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`ID`, `First_Name`, `Last_Name`, `Contact_Num`, `Email`, `UserPwd`, `Date_Created`, `Status`, `Role`) VALUES
-(44, 'Test', 'User', 9123456789, 'usertrial@gmail.com', '$2y$10$1NMzjv5NfzFcfR.WLkuUU./y/5tAkcDwdi56oVIwZjh5vJd/rFrdW', '2020-11-09 08:16:21', 1, 1);
+(44, 'Test', 'User', 9123456789, 'usertrial@gmail.com', '$2y$10$1NMzjv5NfzFcfR.WLkuUU./y/5tAkcDwdi56oVIwZjh5vJd/rFrdW', '2020-11-09 08:16:21', 1, 1),
+(45, 'Jonathan', 'Lozano', 9987654321, 'kyle@gmail.com', '$2y$10$4i8LCAPH9yForIzlK3ZXcun59wl6QInEmXRjHVNX5g2TtGWn8ts3a', '2020-11-09 08:24:31', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -67,7 +68,7 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
