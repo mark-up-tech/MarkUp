@@ -28,9 +28,9 @@
 }
 
 .searchbar {
-    position: absolute;
-    margin-top:10px;
-    top:0%;
+  position: absolute;
+  margin-top: 10px;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -101,6 +101,13 @@
 
 .carousel-caption h1 {
   color: #fff;
+  text-shadow: 2px 2px #000;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  color: #fff;
+  text-shadow: 1px 1px #000;
   font-weight: bold;
 }
 
