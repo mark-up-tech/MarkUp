@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2020 at 06:05 PM
+-- Generation Time: Nov 09, 2020 at 09:18 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -44,7 +44,7 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`ID`, `First_Name`, `Last_Name`, `Contact_Num`, `Email`, `UserPwd`, `Date_Created`, `Status`, `Role`) VALUES
-(0, 'Jonathan', 'Lozano', 12345678911, 'kyle@gmail.com', '$2y$10$9nNsPuJMWMnLKo1/orKpA.u/C1Mxa.iTARvfIrVV5.N6dxUudR7S6', '2020-11-08 14:02:44', 1, 1);
+(44, 'Test', 'User', 9123456789, 'usertrial@gmail.com', '$2y$10$1NMzjv5NfzFcfR.WLkuUU./y/5tAkcDwdi56oVIwZjh5vJd/rFrdW', '2020-11-09 08:16:21', 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -58,6 +58,16 @@ ALTER TABLE `accounts`
   ADD UNIQUE KEY `uname` (`Email`),
   ADD UNIQUE KEY `Email` (`Email`),
   ADD UNIQUE KEY `Contact_Num` (`Contact_Num`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
