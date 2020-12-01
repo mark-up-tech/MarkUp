@@ -112,7 +112,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
     mysqli_stmt_bind_param($stmt, "ssiss", $fname, $lname, $contact, $email, $hashedPwd);
     mysqli_stmt_execute($stmt); 
     mysqli_stmt_close($stmt);
-        header("location: ../login.php");
+        header("location: ../signup.php");
         exit();
  }
 
@@ -149,6 +149,7 @@ function loginUser($conn, $contact, $pwd) {
         $_SESSION["fname"] = $emailExists["First_Name"];
         $_SESSION["email"] = $emailExists["Email"];
         $_SESSION["lname"] = $emailExists["Last_Name"];
+        $_SESSION["Role"] = $emailExists["Role"];
         
         header("location: ../index.php");
         exit();
