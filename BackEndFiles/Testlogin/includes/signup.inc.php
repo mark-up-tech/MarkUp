@@ -41,8 +41,13 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-    if (emailExixst($conn, $email, $contact) !== false) {
+    if (emailExist($conn, $email, $contact) !== false) {
         header("location: ../signup.php?error=emailtaken");
+        exit();
+    }
+
+    if (contactExist($conn, $contact) !== false) {
+        header("location: ../signup.php?error=contacttaken");
         exit();
     }
 

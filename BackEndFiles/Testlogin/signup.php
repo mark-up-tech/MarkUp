@@ -61,7 +61,7 @@
                         <input type="text" name="lname" placeholder="Last Name">
                     </div>
                     <div class="inputBx">
-                        <input type="text" minlenght="11" maxlength ="11" name="contactno" placeholder="Mobile No.">
+                        <input title="Number Must Start With 09" type="text" pattern="09.+" minlenght="11" maxlength ="11" name="contactno" placeholder="Mobile No.">
                     </div>
                     <div class="inputBx">
                         <input type="text" name="email" placeholder="Email">
@@ -97,6 +97,9 @@
         }
         elseif ($_GET["error"] == "emailtaken"){
             echo "<p> Email already taken!<p>";
+        }
+        elseif ($_GET["error"] == "contacttaken"){
+            echo "<p> Contact Number already taken!<p>";
         }
         elseif ($_GET["error"] == "none"){
             echo "<p> You have signed Up! Click the Log-in to Login!<p>";   

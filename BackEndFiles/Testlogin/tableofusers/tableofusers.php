@@ -3,6 +3,15 @@
     include_once '../includes/dbhandler.inc.php';
 ?>
 
+<script type="text/javascript">
+        window.history.forward();
+
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+
+    
 <!DOCTYPE html>
 <html>
 
@@ -32,8 +41,8 @@
                 <button class="navbar-toggler py3" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false" aria-controls="navbarMenu">
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                <a href="Sign Up.html">
-                    <div class="btn btn-outline-dark myBtn2 mb-3 mb-md-0"><b>Logout</b></div>
+                <a href="../includes/logout.inc.php">
+                    <div class="btn btn-outline-dark myBtn2 mb-3 mb-md-0" ><b>Logout</b></div>
                 </a>
             </nav>
         </div>
@@ -64,6 +73,7 @@
 
                     
                     <div class="col-xl-10 col-lg-9 p-5" id="contents">
+                        
                         <table id="datable" class="table table-hover table-bordered table-light table-sm" cellspacing="0" width="100%">
                             <thead>
                                 
@@ -81,159 +91,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            
-                            
+                                
                             <?php
-    $sql = "SELECT * FROM accounts;";
-    $result = mysqli_query($conn, $sql);
-    $resulCheck = mysqli_num_rows($result);
+                            
+                            $sql = "SELECT * FROM accounts;";
+                            $result = mysqli_query($conn, $sql);
+                            $resulCheck = mysqli_num_rows($result);
     
-    if($resulCheck > 0){
-        while($row = mysqli_fetch_assoc($result)){
-            echo "<tr><td>" . $row['ID'] . "";
-            echo "</td><td>" . $row['First_Name'] . " "; 
-            echo $row['Last_Name']. "<td>" ; 
-            echo $row['Email'] . "";
-            echo "<td>" .$row['Contact_Num'] . "<td>";
-            echo $row['Status'] ."<tr>";
+                            if($resulCheck > 0){
+                            while($row = mysqli_fetch_assoc($result)){
+                            echo "<tr><td>" . $row['ID'] . "";
+                            echo "</td><td>" . $row['First_Name'] . " "; 
+                            echo $row['Last_Name']. "<td>" ; 
+                            echo $row['Email'] . "";
+                            echo "<td>" .$row['Contact_Num'] . "<td>";
+                            echo $row['Status'] ."<td>";
+                            echo "
+                                <button type='button' class='btn btn-success'><i class='fas fa-edit'></i></button>
+                                <button type='button' class='btn btn-danger'><i class='far fa-trash-alt'></i></button>
+                            <tr>";
             
-        }     
-    }
+                             }     
+                            }
     
-?>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th>
-                                    <td>Franco Arambulo</td>
-                                    <td>arambulofranks@gmail.com</td>
-                                    <td>+639568853497</td>
-                                    <td>Active</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                    </td>
-                                </tr>
-
+                            ?>
+                                                                                                                 
                             </tbody>
                         </table>
                     </div>
@@ -256,8 +138,11 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#datable').DataTable();
-        });
+         });
     </script>
+    
+    
+    
 </body>
 
 </html>

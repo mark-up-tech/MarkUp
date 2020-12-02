@@ -58,11 +58,12 @@ session_start();
                         
                         if (isset($_SESSION["Role"])) {
                             echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            echo "<li class ='nav-item' ><a class = 'nav-link' href='tableofusers/tableofusers.php'>Tables</a></li>";
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='includes/logout.inc.php'>Log Out</a></li>";
                         }
                         else if(isset($_SESSION["email"])){
                             echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
-                            echo "<li class ='nav-item' ><a class = 'nav-link' href='tableofusers/tableofusers.php'>Tables</a></li>";
+                            
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='includes/logout.inc.php'>Log Out</a></li>";
                         }   
                         else{
