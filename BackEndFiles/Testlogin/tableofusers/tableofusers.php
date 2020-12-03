@@ -42,6 +42,7 @@
                       <span class="navbar-toggler-icon"></span>
                     </button>
                 <a href="../includes/logout.inc.php">
+                
                     <div class="btn btn-outline-dark myBtn2 mb-3 mb-md-0" ><b>Logout</b></div>
                 </a>
             </nav>

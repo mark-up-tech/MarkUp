@@ -72,41 +72,42 @@
                     <div class="inputBx">
                         <input type="password" name="pwdrepeat" placeholder="Repeat Password">
                     </div>
+                    
                      <?php
-      if(isset($_GET["error"])){
-        if($_GET["error"] == "emptyinput"){
-            echo "<p> Fill in all fields!<p>";
-        }
-        elseif ($_GET["error"] == "invalidfname"){
-            echo "<p> Fill in Firstname field!<p>";
-        }
-        elseif ($_GET["error"] == "invalidlname"){
-            echo "<p> Fill in Lastname field!<p>";
-        }
-        elseif ($_GET["error"] == "invalidcontactno"){
-            echo "<p> Contact No. Must be 11 digits!<p>";
-        }
-        elseif ($_GET["error"] == "invalidemail"){
-            echo "<p> Choose a proper email!<p>";
-        }
-        elseif ($_GET["error"] == "passworddontmatch"){
-            echo "<p> Passwords doesn't match!<p>";
-        }
-        elseif ($_GET["error"] == "stmtfailed"){
-            echo "<p> Something went wrong, try Again!<p>";
-        }
-        elseif ($_GET["error"] == "emailtaken"){
-            echo "<p> Email already taken!<p>";
-        }
-        elseif ($_GET["error"] == "contacttaken"){
-            echo "<p> Contact Number already taken!<p>";
-        }
-        elseif ($_GET["error"] == "none"){
-            echo "<p> You have signed Up! Click the Log-in to Login!<p>";   
-        }
-    }
+                     if(isset($_GET["error"])){
+                    if($_GET["error"] == "emptyinput"){
+                         echo "<p> Fill in all fields!<p>";
+                    }
+                    elseif ($_GET["error"] == "invalidfname"){
+                        echo "<p> Fill in Firstname field!<p>";
+                    }
+                    elseif ($_GET["error"] == "invalidlname"){
+                        echo "<p> Fill in Lastname field!<p>";
+                    }
+                    elseif ($_GET["error"] == "invalidcontactno"){
+                        echo "<p> Contact No. Must be 11 digits!<p>";
+                    }
+                    elseif ($_GET["error"] == "invalidemail"){
+                        echo "<p> Choose a proper email!<p>";
+                    }
+                    elseif ($_GET["error"] == "passworddontmatch"){
+                        echo "<p> Passwords doesn't match!<p>";
+                    }
+                    elseif ($_GET["error"] == "stmtfailed"){
+                        echo "<p> Something went wrong, try Again!<p>";
+                    }
+                    elseif ($_GET["error"] == "emailtaken"){
+                        echo "<p> Email already taken!<p>";
+                    }
+                    elseif ($_GET["error"] == "contacttaken"){
+                        echo "<p> Contact Number already taken!<p>";
+                    }
+                    elseif ($_GET["error"] == "none"){
+                        echo "<p> You have signed Up! Click the Log-in to Login!<p>";   
+                    }
+                     }
     
-?>
+                    ?>
                     <div class="inputBx">
                         <p>By clicking "SIGN UP", I agree to Mark-Up's <a href="#">Terms and Conditions</a> </p>
                     </div>
