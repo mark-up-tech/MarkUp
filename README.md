@@ -2,20 +2,20 @@
 
 MarkUp is an online auction website
 
-Languages used: 
-Front End:
+<b>Languages used: </b>
+<b>Front End:</b>
 <ul>
-  <li>HTML<li>
-  <li>JS<li>
-  <li>Bootstrap<li>
+  <li>HTML</li>
+  <li>JS</li>
+  <li>Bootstrap</li>
 </ul>
 
-Back End:
+<b>Back End:</b>
 <ul>
-  <li>MySQL<li>
+  <li>MySQL</li>
 </ul>
 
-Tools:
+<b>Tools:</b>
 <ul>
-  <li>Xampp<li>
+  <li>Xampp</li>
 </ul>
