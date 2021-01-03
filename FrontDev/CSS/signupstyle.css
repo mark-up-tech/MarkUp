@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
-
-.navbar-light .navbar-nav .nav-link a {
+.navbar-nav a {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: bolder;
+  text-transform: uppercase;
 }
 
 .navbar-light .navbar-nav .active > .nav-link,
@@ -15,8 +17,6 @@
 .navbar-light.navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.show > .nav-link {
   color: #5b9bd5;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
 }
 
 .navbar-light.navbar-nav .nav-link {
@@ -28,53 +28,17 @@
   color: #5b9bd5 !important;
 }
 
-.searchbar {
-  position: absolute;
-  margin-top: 10px;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
+.btn-outline-success {
+  color: #5b9bd5;
+  background-color: transparent;
+  background-image: none;
+  border-color: #5b9bd5;
 }
 
-.searchbar input[type="text"] {
-  border: 0;
-  padding: 0;
-  width: 0px;
-  height: 35px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.searchbar .icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35px;
-  height: 100%;
-  background: none;
-  border-radius: 3px;
-  color: #000;
-  transition: all 0.5s 0.3s ease;
-}
-
-.searchbar .icon i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-
-.searchbar .icon.active {
-  background: #5b9bd5;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.searchbar input[type="text"].active {
-  width: 250px;
-  padding: 0 10px;
-  transition: all 0.5s 0.2s ease;
+.btn-outline-success:hover {
+  color: #ffffff;
+  background-color: #5b9bd5;
+  border-color: #5b9bd5;
 }
 
 section {
