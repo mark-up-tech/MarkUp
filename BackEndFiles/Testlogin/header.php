@@ -12,7 +12,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="html/style.css">
+    <link rel="stylesheet" href="html/homestyle.css">
     <link rel="icon" type="image/png" href="html/mulogo.png">
     <title>Mark Up</title>
 </head>
@@ -56,15 +56,21 @@ session_start();
                     
                     <?php
                         
-                        if (isset($_SESSION["email"])) {
+                        if (isset($_SESSION["Role"])) {
                             echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            echo "<li class ='nav-item' ><a class = 'nav-link' href='tableofusers/tableofusers.php'>Tables</a></li>";
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='includes/logout.inc.php'>Log Out</a></li>";
                         }
-                        else {
+                        else if(isset($_SESSION["email"])){
+                            echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            
+                            echo "<li class ='nav-item' ><a class = 'nav-link' href='includes/logout.inc.php'>Log Out</a></li>";
+                        }   
+                        else{
                             echo " </li><li class='nav-item'>
                             <a class='nav-link' type='button' data-toggle='modal' data-target='#MoLog'>Login</a>";
-                            echo "<li><a class = 'nav-link' href='#'>Sign Up</a></li>";
-                        }                        
+                            echo "<li><a class = 'nav-link' href='signup.php'>Sign Up</a></li>";
+                        }                     
                     ?>
                 </ul>
             </div>
@@ -78,7 +84,7 @@ session_start();
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="avatar">
-                    <img src="mulogo.png" alt="">
+                    <img src="html/mulogo.png" alt="">
                     <h4 class="modal-title">Login</h4>
                 </div>
                 <form action="includes/login.inc.php" method="post">
@@ -91,9 +97,10 @@ session_start();
                     <div class="form-group">
                         <input type="submit" name="submit" class="btn btn-primary btn-block btn-lg" value="Login">
                     </div>
-                    <p class="font-small blue-text d-flex justify-content-center">Don't have an account?<a href="#" class="blue-text ml-1">Sign up here</a></p>
+                    <p class="font-small blue-text d-flex justify-content-center">Don't have an account?<a href="signup.php" class="blue-text ml-1">Sign up here</a></p>
                 </form>
                 <?php
+
     if(isset($_GET["error"])){
         if($_GET["error"] == "emptyinput"){
             echo "<p> Fill in all fields!<p>";
@@ -107,13 +114,6 @@ session_start();
     }
     
 ?>
-    <script type="text/javascript">
-        window.history.forward();
-
-        function noBack() {
-            window.history.forward();
-        }
-    </script>
 
             </div>
         </div>

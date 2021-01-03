@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="html/3.jpg" class="d-block w-100" alt="Third">
+                <img src="html/Carousel3.jpg" class="d-block w-100" alt="Third">
                 <div class="carousel-caption text-right d-none d-md-block">
                     <h3>Got any question?</h3>
                     <a href="#" class="btn btn-primary mr-1">

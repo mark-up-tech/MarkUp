@@ -73,15 +73,15 @@ function  pwdMatch($pwd, $pwdRepeat){
     return $result;
 }
 
-function  emailExixst($conn, $email, $contact ){
-   $sql = "SELECT * FROM accounts WHERE Email = ? OR Contact_Num = ?;";
+function  emailExist($conn, $email ){
+   $sql = "SELECT * FROM accounts WHERE Email = ?;";
    $stmt = mysqli_stmt_init($conn);
    if(!mysqli_stmt_prepare($stmt, $sql)){
     header("location: ../signup.php?error=stmtfailed");
     exit();
    }
 
-   mysqli_stmt_bind_param($stmt, "si", $email, $contact);
+   mysqli_stmt_bind_param($stmt, "s", $email);
    mysqli_stmt_execute($stmt);
 
 
@@ -98,6 +98,32 @@ function  emailExixst($conn, $email, $contact ){
    mysqli_stmt_close($stmt);
 }
 
+function  contactExist($conn, $contact ){
+    $sql = "SELECT * FROM accounts WHERE Contact_Num = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+     header("location: ../signup.php?error=stmtfailed");
+     exit();
+    }
+ 
+    mysqli_stmt_bind_param($stmt, "s", $contact);
+    mysqli_stmt_execute($stmt);
+ 
+ 
+    $resultData = mysqli_stmt_get_result($stmt);
+ 
+    if($row = mysqli_fetch_assoc($resultData)){
+     return $row;
+    }
+    else{
+        $result = false;
+        return $result;
+    }
+ 
+    mysqli_stmt_close($stmt);
+ }
+
+
 function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
     $sql = "INSERT INTO  accounts (First_Name, Last_Name, Contact_Num, Email, UserPwd) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
@@ -109,10 +135,10 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssiss", $fname, $lname, $contact, $email, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "sssss", $fname, $lname, $contact, $email, $hashedPwd);
     mysqli_stmt_execute($stmt); 
     mysqli_stmt_close($stmt);
-        header("location: ../login.php");
+        header("location: ../signup.php?error=none");
         exit();
  }
 
@@ -130,7 +156,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
 }
 
 function loginUser($conn, $contact, $pwd) {
-    $emailExists = emailExixst($conn, $contact, $contact );
+    $emailExists = emailExist($conn, $contact, $contact );
 
     if($emailExists === false) {
         header("location: ../index.php?error=wrongLogin");
@@ -149,6 +175,7 @@ function loginUser($conn, $contact, $pwd) {
         $_SESSION["fname"] = $emailExists["First_Name"];
         $_SESSION["email"] = $emailExists["Email"];
         $_SESSION["lname"] = $emailExists["Last_Name"];
+        $_SESSION["Role"] = $emailExists["Role"];
         
         header("location: ../index.php");
         exit();
