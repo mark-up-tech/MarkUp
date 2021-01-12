@@ -1,5 +1,6 @@
 <?php
     include_once 'header.php';
+    include_once '../Testlogin/navbars/navbarhome.php'
     
 ?>
 
@@ -12,7 +13,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="html/1.jpg" class="d-block w-100" alt="First">
+                <img src="../Testlogin/Images/Carousel1.jpg" class="d-block w-100" alt="First">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>About us</h1>
                     <p>Mark-Up is a newly developed Auction System created by a team of 6 students in Technological University of the Philippines.</p>
@@ -22,7 +23,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="html/2.jpg" class="d-block w-100" alt="Second">
+                <img src="../Testlogin/Images/Carousel2.jpg" class="d-block w-100" alt="Second">
                 <div class="carousel-caption text-left d-none d-md-block">
                     <h3>How does it work?</h3>
                     <h5>Step 1: Lorem ipsum dolor sit amet. <br/> Step 2: Lorem ipsum dolor sit amet. <br/> Step 3: Lorem ipsum dolor sit amet.
@@ -33,7 +34,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="html/Carousel3.jpg" class="d-block w-100" alt="Third">
+                <img src="../Testlogin/Images/Carousel3.jpg" class="d-block w-100" alt="Third">
                 <div class="carousel-caption text-right d-none d-md-block">
                     <h3>Got any question?</h3>
                     <a href="#" class="btn btn-primary mr-1">
@@ -58,7 +59,7 @@
     <div class="card-deck">
         <div class="col-md-4">
             <div class="card text-center">
-                <img class="card-img-top" src="html/4.jpg" alt="Card image cap">
+                <img class="card-img-top" src="../Testlogin/Images/Card1.jpg" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Women's</h4>
                     <a href="#" class="btn btn-outline-info mr-1">Start Bidding Here</a>
@@ -67,7 +68,7 @@
         </div>
         <div class="col-md-4">
             <div class="card text-center">
-                <img class="card-img-top" src="html/5.jpg" alt="Card image cap">
+                <img class="card-img-top" src="../Testlogin/Images/Card2.jpg" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Men's</h4>
                     <a href="#" class="btn btn-outline-info mr-1">Start Bidding Here</a>
@@ -76,7 +77,7 @@
         </div>
         <div class="col-md-4">
             <div class="card text-center">
-                <img class="card-img-top" src="html/6.jpg" alt="Card image cap">
+                <img class="card-img-top" src="../Testlogin/Images/Card3.jpg" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Miscellaneous</h4>
                     <a href="#" class="btn btn-outline-info mr-1">Start Bidding Here</a>

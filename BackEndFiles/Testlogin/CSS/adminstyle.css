@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebf3fa;
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #c2daf0;
+}
+
+.list-group-item a {
+    color: #0b0c10;
+}
+
+
+/* NAVIGATION BAR */
+
+.navbar-brand {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+.navbar-name {
+    padding-top: 10px;
+}
+
+.link-effect::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #c2daf0;
+    transition: width 0.3s;
+}
+
+.link-effect:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.myBtn2 {
+    font-family: "Roboto", sans-serif;
+}
+
+.myBtn2:hover,
+.myBtn2:focus,
+.myBtn2:active,
+.myBtn2.active {
+    color: #fff;
+    background-color: #5b9bd5;
+    border-color: #5b9bd5;
+}
+
+.wrapper {
+    min-height: 100vh;
+    line-height: 150%;
+}
+
+.sidebar {
+    background-color: #5b9bd5;
+}
+
+.nav-item {
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.active {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+#myHeader {
+    position: relative;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#contents {
+    background-color: #ebf3fa;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.table-primary {
+    background-color: #c2daf0;
+}
+
+
+/* MEDIA SCREEN */
+
+@media only screen and (max-width: 540px) {
+    .myBtn2 {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
