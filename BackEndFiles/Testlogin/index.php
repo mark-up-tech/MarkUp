@@ -17,7 +17,7 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h1>About us</h1>
                     <p>Mark-Up is a newly developed Auction System created by a team of 6 students in Technological University of the Philippines.</p>
-                    <a href="#" class="btn btn-primary mr-1">
+                    <a href="shop.php" class="btn btn-primary mr-1">
                     Start Bidding Now
                 </a>
                 </div>
@@ -28,7 +28,7 @@
                     <h3>How does it work?</h3>
                     <h5>Step 1: Lorem ipsum dolor sit amet. <br/> Step 2: Lorem ipsum dolor sit amet. <br/> Step 3: Lorem ipsum dolor sit amet.
                     </h5>
-                    <a href="#" class="btn btn-primary mr-1">
+                    <a href="shop.php" class="btn btn-primary mr-1">
                     Start Bidding Now
                 </a>
                 </div>
@@ -62,7 +62,7 @@
                 <img class="card-img-top" src="../Testlogin/Images/Card1.jpg" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Women's</h4>
-                    <a href="#" class="btn btn-outline-info mr-1">Start Bidding Here</a>
+                    <a href="shop.php" class="btn btn-outline-info mr-1">Start Bidding Here</a>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 <img class="card-img-top" src="../Testlogin/Images/Card2.jpg" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Men's</h4>
-                    <a href="#" class="btn btn-outline-info mr-1">Start Bidding Here</a>
+                    <a href="shop.php" class="btn btn-outline-info mr-1">Start Bidding Here</a>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
                 <img class="card-img-top" src="../Testlogin/Images/Card3.jpg" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Miscellaneous</h4>
-                    <a href="#" class="btn btn-outline-info mr-1">Start Bidding Here</a>
+                    <a href="shop.php" class="btn btn-outline-info mr-1">Start Bidding Here</a>
                 </div>
             </div>
         </div>

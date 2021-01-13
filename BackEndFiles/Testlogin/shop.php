@@ -33,7 +33,8 @@
         </form>
       </div>
       <!-- Card -->
-                                                
+      <div class="col-xl-10 col-lg-9 p-5" id="contents">             
+                  <div class="row">                                       
         <?php
                                                                                     
             $sql = "SELECT * FROM ais;";
@@ -41,31 +42,24 @@
              $resultCheck = mysqli_num_rows($result);
     
            if($resultCheck > 0){
-            while($row = mysqli_fetch_assoc($result)){?>
-            <div class="col-xl-10 col-lg-9 p-5" id="contents">
-              <div class="row">
-              <div class="col-md-4">
-            <div class="col-4 col-sm-10 card-deck">
-            <a href="#" class="card">
-              <img class="card-img-top" src="../Testlogin/Images/shopItems/<?= $row['Image'] ?>" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title"> <?= $row['Item_Description'] ?> </h4>
-                <p class="card-text">Highest Ask:</br> <?= $row['Starting_Amount'] ?> </p>
-              </div>
-            </a>
-                  </div>  
-                </div>
-              </div>
-            </div>
-            
+            while($row = mysqli_fetch_assoc($result)){?>                      
+                    <div class="col-md-4">
+                        <div class="col-4 col-sm-10 card-deck">
+                            <a href="itempage.php" class="card">
+                              <img class="card-img-top" src="Images/shopItems/<?= $row['Image'] ?>.jpg" alt="Card image cap">
+                          <div class="card-block">
+                              <h4 class="card-title"> <?= $row['Item_Description'] ?> </h4>
+                            <p class="card-text">Highest Ask:</br> <?= $row['Starting_Amount'] ?> </p>
+                          </div>
+                            </a>
+                          </div>  
+                      </div>                               
             <?php                                                   
             }     
            }   ?>
-                            
-        
-                            
-               
-          
+            </div>
+              </div>
+                                                                                        
     <!-- FOOTER -->
     <footer>
       <div class="container-fluid text-center text-light p-0 footer">

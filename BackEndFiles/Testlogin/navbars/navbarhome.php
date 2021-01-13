@@ -1,13 +1,5 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-<?php
-     
-     if(isset($_SESSION["lname"]) && ($_SESSION["fname"])){
-         
-        echo "<h2 class='header2'> Hello There " . $_SESSION["fname"]." ". $_SESSION["lname"]."!</h2>";       
-        unset($_SESSION["lname"]);
-         }        
-    ?>
         <div class="container">
           <a class="navbar-brand " href="index.php">
             <img src="../Testlogin/Images/mulogo.png" width="50" height="50" class="d-inline-block align-middle" alt="">               
@@ -30,15 +22,17 @@
                         
                         if (isset($_SESSION["Role"])) {
                             echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
-                            echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/Tables/tableofusers.php'>Tables</a></li>";
+                            if ($_SESSION["Role"] == 0) {
+                                echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/Tables/tableofusers.php'>Tables</a></li>";
+                            }
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/includes/logout.inc.php'>Log Out</a></li>";
                         }
-                        else if(isset($_SESSION["email"])){
+                          else if(isset($_SESSION["email"])){
                             echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
                             
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/includes/logout.inc.php'>Log Out</a></li>";
                         }   
-                        else{
+                          else{
                             echo " </li><li class='nav-item'>
                             <a class='nav-link' type='button' href='../Testlogin/login.php'>Login</a>";
                             echo "<li><a class = 'nav-link' href='../Testlogin/signup.php'>Sign Up</a></li>";
