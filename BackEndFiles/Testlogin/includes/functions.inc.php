@@ -138,7 +138,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
     mysqli_stmt_bind_param($stmt, "sssss", $fname, $lname, $contact, $email, $hashedPwd);
     mysqli_stmt_execute($stmt); 
     mysqli_stmt_close($stmt);
-        header("location: ../signup.php?error=none");
+        header("location: ../login.php");
         exit();
  }
 
@@ -159,7 +159,7 @@ function loginUser($conn, $contact, $pwd) {
     $emailExists = emailExist($conn, $contact, $contact );
 
     if($emailExists === false) {
-        header("location: ../index.php?error=wrongLogin");
+        header("location: ../login.php?error=wrongLogin");
         exit();
     }
 
@@ -167,7 +167,7 @@ function loginUser($conn, $contact, $pwd) {
     $checkPwd = password_verify($pwd, $pwdhashed);
 
     if($checkPwd === false) {
-        header("location: ../index.php?error=wrongpassword");
+        header("location: ../login.php?error=wrongpassword");
         exit();
     }
     elseif ($checkPwd === true){

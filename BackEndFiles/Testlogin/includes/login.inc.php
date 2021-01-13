@@ -9,7 +9,7 @@ if(isset($_POST["submit"])) {
     require_once 'functions.inc.php';
 
     if (emptyInputLogin($contact, $pwd) !== false) {
-        header("location: ../index.php?error=emptyinput");
+        header("location: ../login.php?error=emptyinput");
         exit();
     }
 
