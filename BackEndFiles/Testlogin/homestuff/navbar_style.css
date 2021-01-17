@@ -1,0 +1,99 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar-custom a {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  color: #ffffff;
+}
+.navbar-custom a.active,
+.navbar-custom a:hover {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  color: #5b9bd5;
+}
+
+.form-search-custom .search-button {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #5b9bd5;
+  border: 1px solid #5b9bd5;
+  border-radius: 6px;
+}
+
+/* Custom Toggler */
+.custom-toggler.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.8);
+  height: 50px;
+  width: 50px;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  height: 25px;
+  width: 25px;
+  margin: auto;
+}
+
+/* Navbar Search Bar */
+.navbar-custom .search-custom {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  height: 40px;
+  width: 250px;
+  border-radius: 6px;
+}
+.navbar-custom .search-custom:focus {
+  background-color: #ffffff;
+  border: 1px solid #5b9bd5;
+  border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.navbar-custom .search-button {
+  height: 40px;
+  font-size: 16px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.navbar-custom .search-button:hover {
+  height: 40px;
+  color: #ffffff;
+  background: #5b9bd5;
+  border: 1px solid #5b9bd5;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+/* Middle Search Bar */
+.searchbar-middle .search-custom-middle {
+  font-family: FontAwesome, "Open Sans";
+  width: 80vw;
+  height: 65px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  font-size: 20px;
+}
+.searchbar-middle .search-custom-middle:focus {
+  width: 80vw;
+  height: 65px;
+  border: 1px solid #5b9bd5;
+  border-radius: 7px;
+  font-size: 20px;
+  box-shadow: none;
+}

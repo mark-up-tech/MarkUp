@@ -78,7 +78,7 @@
                       <i class="fa fa-minus"></i>
                     </button>
                                 </div>
-                                <input type="number" id="qty_input" class="form-control form-control-md text-center rounded" onkeydown="return false" value="1000" min="1000" />
+                                <input type="number" id="qty_input" class="form-control form-control-md text-center rounded" onkeydown="return false" value="500" min="500" />
                                 <div class="input-group-prepend">
                                     <button class="btn btn-primary btn-md ml-2 rounded" id="plus-btn">
                       <i class="fa fa-plus"></i>
@@ -136,12 +136,12 @@
     
     <script>$("#qty_input").prop("disabled", true);
 $("#plus-btn").click(function() {
-    $("#qty_input").val(parseInt($("#qty_input").val()) + 1000);
+    $("#qty_input").val(parseInt($("#qty_input").val()) + 500);
 });
 $("#minus-btn").click(function() {
-    $("#qty_input").val(parseInt($("#qty_input").val()) - 1000);
-    if ($("#qty_input").val() <= 1000) {
-        $("#qty_input").val(1000);
+    $("#qty_input").val(parseInt($("#qty_input").val()) - 500);
+    if ($("#qty_input").val() <= 500) {
+        $("#qty_input").val(500);
     }
 
 
