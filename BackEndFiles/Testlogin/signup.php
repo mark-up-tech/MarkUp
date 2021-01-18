@@ -1,5 +1,6 @@
 <?php
- include_once 'header.php'
+ include_once 'header.php';
+ include_once '../Testlogin/navbars/navbarsignup.php'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,48 +13,19 @@
     <title>Sign-Up</title>
     <link rel="icon" type="image/png" href="/Images/mulogo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="html/signupstyle.css">
+    <link rel="stylesheet" href="CSS/signupstyle.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">MarkUp</a>
-            <div class="searchbar">
-                <input type="text" placeholder="search">
-                <div class="icon">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">SHOP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#MoLog">LOGIN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="signup.php">SIGN UP</a>
-                    </li>
-                </ul>
-            </div>
-    </nav>
+
 
     <section>
         <div class="imgBx">
-            <img src="html/Sign Up.jpg">
+            <img src="../Testlogin/Images/Sign Up.jpg">
         </div>
         <div class="contentBx">
             <div class="formBx">
                 <h2>Create your Mark-Up Account</h2>
-                <form action="includes/signup.inc.php" method="post">
+                <form action="../Testlogin/includes/signup.inc.php" method="post">
                     <div class="inputBx">
                         <input type="text" name="fname" placeholder="First Name">
                     </div>
@@ -115,7 +87,7 @@
                         <input type="submit" value="SIGN UP" name="submit">
                     </div>
                     <div class="inputBx">
-                        <p>Already a member? <a data-toggle="modal"  href="#MoLog">Login here</a> </p>
+                        <p>Already a member? <a class="link"  href="login.php">Login here</a> </p>
                     </div>
                     
                 </form>
