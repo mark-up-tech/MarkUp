@@ -11,32 +11,32 @@
             <div class="collapse navbar-collapse my-2 py-2" id="collapsibleNavbar"> 
                 <ul class="navbar-nav navbar-custom2 mr-auto my-auto">
                     <li class="nav-item active"><a class="nav-link mx-1 px-3 py-3" href="home.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link mx-1 px-3 py-3" href="../shop.php">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link mx-1 px-3 py-3" href="../about.php">About</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1 px-3 py-3" href="../content/shop.php">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1 px-3 py-3" href="../content/about.php">About</a></li>
                     <?php                       
                         if (isset($_SESSION["Role"])) {
-                            echo " <li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            echo " <li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='../content/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
                             if ($_SESSION["Role"] == 0) {
                                 echo "<li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='../tables/tableofusers.php'>Tables</a></li>";
                             }
                             echo "<li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='../includes/logout.inc.php'>Log Out</a></li>";
                         }
                           else if(isset($_SESSION["email"])){
-                            echo " <li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            echo " <li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='../content/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
                             
                             echo "<li class ='nav-item' ><a class = 'nav-link mx-1 px-3 py-3' href='../includes/logout.inc.php'>Log Out</a></li>";
                         }   
                           else{
                             echo " </li><li class='nav-item'>
-                            <a class='nav-link mx-1 px-3 py-3' type='button' href='../login.php'>Login</a>";
-                            echo "<li><a class = 'nav-link mx-1 px-3 py-3' href='../signup.php'>Sign Up</a></li>";
+                            <a class='nav-link mx-1 px-3 py-3' type='button' href='../content/login.php'>Login</a>";
+                            echo "<li><a class = 'nav-link mx-1 px-3 py-3' href='../content/signup.php'>Sign Up</a></li>";
                         }                     
                     ?>
                 </ul>
                 <form class="form-inline form-search-custom" action="#" method="post">
                     <input name="search-items" id="search" class="form-control search-custom" type="text" placeholder="Search" autocomplete="off" aria-label="Search">
                     <button type="submit" class="btn search-button ml-2 pt-1 pb-2 px-3" name="search_button" id="search_button">Search</button>
-                    <div class="search-result"></div> <!-- dropdown ng search. pwede po iremove if wala -->
+                    <div class="search-result"></div> 
                 </form>
             </div>
 
@@ -76,15 +76,7 @@
             } else {
                 x.style.height = "90px";
             }
-        // } else if (x.style.height === "100vh" && (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)) {
-        //     if (x.style.height === "100vh") {
-        //         x.style.height = "100vh";
-        //     } else if (x.style.height === "100vh" && (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)) {
-        //         x.style.height = "375px";
-        //     } else {
-        //         // x.style.height = "90px";
-        //         x.style.height = "375px";
-        //     }
+        
         }
     }
 </script>

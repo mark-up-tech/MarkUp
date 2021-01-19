@@ -77,7 +77,7 @@ function  emailExist($conn, $email ){
    $sql = "SELECT * FROM accounts WHERE Email = ?;";
    $stmt = mysqli_stmt_init($conn);
    if(!mysqli_stmt_prepare($stmt, $sql)){
-    header("location: ../signup.php?error=stmtfailed");
+    header("location: ../content/signup.php?error=stmtfailed");
     exit();
    }
 
@@ -102,7 +102,7 @@ function  contactExist($conn, $contact ){
     $sql = "SELECT * FROM accounts WHERE Contact_Num = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-     header("location: ../signup.php?error=stmtfailed");
+     header("location: ../content/signup.php?error=stmtfailed");
      exit();
     }
  
@@ -128,7 +128,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
     $sql = "INSERT INTO  accounts (First_Name, Last_Name, Contact_Num, Email, UserPwd) VALUES (?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-     header("location: ../signup.php?error=stmtfailed");
+     header("location: ../content/signup.php?error=stmtfailed");
      exit();
     }
  
@@ -138,7 +138,7 @@ function  createUser($conn, $fname, $lname, $contact, $email, $pwd){
     mysqli_stmt_bind_param($stmt, "sssss", $fname, $lname, $contact, $email, $hashedPwd);
     mysqli_stmt_execute($stmt); 
     mysqli_stmt_close($stmt);
-        header("location: ../login.php");
+        header("location: ../content/login.php");
         exit();
  }
 
@@ -159,7 +159,7 @@ function loginUser($conn, $contact, $pwd) {
     $emailExists = emailExist($conn, $contact, $contact );
 
     if($emailExists === false) {
-        header("location: ../login.php?error=wrongLogin");
+        header("location: ../content/login.php?error=wrongLogin");
         exit();
     }
 
@@ -167,7 +167,7 @@ function loginUser($conn, $contact, $pwd) {
     $checkPwd = password_verify($pwd, $pwdhashed);
 
     if($checkPwd === false) {
-        header("location: ../login.php?error=wrongpassword");
+        header("location: ../content/login.php?error=wrongpassword");
         exit();
     }
     elseif ($checkPwd === true){

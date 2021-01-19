@@ -3,9 +3,9 @@
     <body>
         <?php include 'navbar2.php'; ?>
 
-        <!-- INPUT CONTENT HERE -->
+        <!-- Home Content -->
         <main class="container-fluid mb-5">
-            <div class="card-container mx-auto" style="width: 90%; margin-top: 45vh"> <!-- navbar - 25px, navbar2 - 40-50vh -->
+            <div class="card-container mx-auto" style="width: 90%; margin-top: 45vh"> 
                 <h3>Browse our Auction</h3>
                 <div class="row d-flex justify-content-center mx-auto">
                     <div class="col-md-3 card container mx-3 my-3 px-0">
@@ -14,7 +14,7 @@
                         </div>
                         <div class="bidding my-3">
                             <h4>Women's</h4>
-                            <a href="../shop.php" class="btn mx-auto d-flex justify-content-center">Start Bidding Here</a>
+                            <a href="../content/shop.php" class="btn mx-auto d-flex justify-content-center">Start Bidding Here</a>
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@
                         </div>
                         <div class="bidding my-3">
                             <h4>Men's</h4>
-                            <a href="../shop.php" class="btn mx-auto d-flex justify-content-center">Start Bidding Here</a>
+                            <a href="../content/shop.php" class="btn mx-auto d-flex justify-content-center">Start Bidding Here</a>
                         </div>
                     </div>
 
@@ -34,7 +34,7 @@
                         </div>
                         <div class="bidding my-3">
                             <h4>Kid's</h4>
-                            <a href="../shop.php" class="btn mx-auto d-flex justify-content-center">Start Bidding Here</a>
+                            <a href="../content/shop.php" class="btn mx-auto d-flex justify-content-center">Start Bidding Here</a>
                         </div>
                     </div>
                 </div>

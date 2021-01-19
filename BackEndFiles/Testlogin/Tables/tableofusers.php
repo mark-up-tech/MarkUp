@@ -61,10 +61,10 @@
                                         <a href="tableofusers.php" class="link-effect text-light"><i class="far fa-fw fa-user"></i><span class="ml-1 active">Users</span></a>
                                     </li>
                                     <li class="nav-item mx-3 my-2">
-                                        <a href="#" class="link-effect text-light"><i class="far fa-fw fa-list-alt"></i><span class="ml-1">Items</span></a>
+                                        <a href="../content/maintenance_page.php" class="link-effect text-light"><i class="far fa-fw fa-list-alt"></i><span class="ml-1">Items</span></a>
                                     </li>
                                     <li class="nav-item mx-3 my-2">
-                                        <a href="#" class="link-effect text-light"><i class="far fa-fw fa-clipboard"></i><span class="ml-1">Bidding Thread</span></a>
+                                        <a href="../content/maintenance_page.php" class="link-effect text-light"><i class="far fa-fw fa-clipboard"></i><span class="ml-1">Bidding Thread</span></a>
                                     </li>
                                 </ul>
                             </div>

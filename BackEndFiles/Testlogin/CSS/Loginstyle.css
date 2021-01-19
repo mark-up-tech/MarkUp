@@ -55,7 +55,7 @@ body {
 
 .login-form {
     height: 100vh;
-    background-image: url("/Images/BG.png");
+    background-image: url("../Images/BG.png");
     background-size: cover;
     display: flex;
     align-items: center;

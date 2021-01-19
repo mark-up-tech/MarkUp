@@ -3,9 +3,9 @@
       id="MyHeader"
       class="navbar navbar-expand-lg sticky-top navbar-light bg-light shadow-sm p-3 mb-5 bg-white">
       <div class="container">
-        <a class="navbar-brand" href="../Testlogin/index.php">
+        <a class="navbar-brand" href="../index.php">
           <img
-            src="../Testlogin/Images/mulogo.png"
+            src="../Images/mulogo.png"
             width="50"
             height="50"
             class="d-inline-block align-middle"
@@ -26,33 +26,33 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="../Testlogin/index.php">Home</a>
+              <a class="nav-link" href="../index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Testlogin/shop.php">Shop</a>
+              <a class="nav-link" href="../content/shop.php">Shop</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../Testlogin/about.php">About</a>
+              <a class="nav-link" href="../content/about.php">About</a>
             </li>
             <?php
                         
                         if (isset($_SESSION["Role"])) {
-                            echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            echo " <li class ='nav-item' ><a class = 'nav-link' href='../content/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
                             if ($_SESSION["Role"] == 0) {
-                              echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/Tables/tableofusers.php'>Tables</a></li>";
+                              echo "<li class ='nav-item' ><a class = 'nav-link' href='../Tables/tableofusers.php'>Tables</a></li>";
                           }
                             
-                            echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/includes/logout.inc.php'>Log Out</a></li>";
+                            echo "<li class ='nav-item' ><a class = 'nav-link' href='../includes/logout.inc.php'>Log Out</a></li>";
                         }
                         else if(isset($_SESSION["email"])){
-                            echo " <li class ='nav-item' ><a class = 'nav-link' href='#'>". $_SESSION['fname']. "</a></li>"; 
+                            echo " <li class ='nav-item' ><a class = 'nav-link' href='../content/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
                             
-                            echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/includes/logout.inc.php'>Log Out</a></li>";
+                            echo "<li class ='nav-item' ><a class = 'nav-link' href='../content/includes/logout.inc.php'>Log Out</a></li>";
                         }   
                         else{
                             echo " </li><li class='nav-item'>
-                            <a class='nav-link' type='button' href='../Testlogin/login.php'>Login</a>";
-                            echo "<li><a class = 'nav-link' href='../Testlogin/signup.php'>Sign Up</a></li>";
+                            <a class='nav-link' type='button' href='../content/login.php'>Login</a>";
+                            echo "<li><a class = 'nav-link' href='../content/signup.php'>Sign Up</a></li>";
                         }                     
                     ?>
           </ul>
