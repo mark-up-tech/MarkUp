@@ -39,12 +39,12 @@
                         if (isset($_SESSION["Role"])) {
                             echo " <li class ='nav-item' ><a class = 'nav-link' href='../content/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
                             if ($_SESSION["Role"] == 0) {
-                              echo "<li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/Tables/tableofusers.php'>Tables</a></li>";
+                              echo "<li class ='nav-item' ><a class = 'nav-link' href='../Tables/tableofusers.php'>Tables</a></li>";
                           }
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='../includes/logout.inc.php'>Log Out</a></li>";
                         }
                         else if(isset($_SESSION["email"])){
-                            echo " <li class ='nav-item' ><a class = 'nav-link' href='../Testlogin/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
+                            echo " <li class ='nav-item' ><a class = 'nav-link' href='../content/maintenance_page.php'>". $_SESSION['fname']. "</a></li>"; 
                             
                             echo "<li class ='nav-item' ><a class = 'nav-link' href='../includes/logout.inc.php'>Log Out</a></li>";
                         }   
